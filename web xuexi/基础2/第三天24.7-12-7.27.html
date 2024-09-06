@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间2024年7月13日16:04:40~</title>
+</head>
+<body>
+
+<h2>01复习</h2>
+<hr color="red">
+1.DOCTYPE:document type 文档类型声明（不是html的标签）
+作用：告诉浏览器按当前标准解析代码
+<br>
+2.图片
+img（图片） src（ 必须属性：路径） alt（当图片不能正常显示时提示文本） title（鼠标悬停显示） height（高度） width（宽度）宽高等比例缩放，单位默认为像素（px）
+<hr>
+<h4>2.路径</h4>
+<ul>
+    <li>绝对路径
+        <ul>
+            <li>网址</li>
+            <li>盘符</li>
+        </ul>
+    </li>
+    <li>相对路径
+        <ul>
+            <li>平级 （直接写路径）</li>
+            <li>下一级 /</li>
+            <li>上一级 ../（每上一级就加一个../）</li>
+        </ul>
+    </li>
+</ul>
+<hr>
+<h4>3.超链接</h4>
+a .(文本，段落，图片等).      /a
+<ul>
+    属性
+    <li>href（跳转路径，空链接时属性值为“#”）</li>
+    <li>target（设置打开窗口，默认_self【当前窗口打开】_blank【可以在新窗口打开】）</li>
+    <li>name（作锚点用）可以 <br>
+        1点击a到a（注意在href属性值里先加一个#号，再输入想要跳转锚点的锚点的name属性值） <br>
+    </li>
+    <li>
+      2.跳转到块级元素 <br>
+       用法： 给块级元素加一个id属性，在a的href属性值输入#加块级元素id属性值即可
+
+    </li>
+</ul>
+<hr>
+<h4>4.块级元素和行内元素的区别</h4>
+<ul>
+    <li>1块级元素独占一行，行内元素在同一行显示</li>
+    <li>2块级元素默认宽度为100% 行内元素默认宽度由内容撑开</li>
+</ul>
+<hr>
+<h4>5.文本格式化标签</h4>
+双标记、行内元素。
+<ul>
+    <li>b加粗</li>
+    <li>i倾斜</li>
+    <li>u下划线</li>
+<li>s或del删除线</li>
+<li>em强调（倾斜）</li>
+    <li>strong强调（加粗）</li>
+<li>sup上标</li>
+    <li>sub下标（p的圈在下就是下标，在上就是上标）</li>
+<li>big大号字体</li>
+    <li>small小号字体</li>
+</ul>
+<hr>
+<h4>6.列表</h4>
+双标记 ，块级元素
+<ul>
+    <li>1无序列表
+        <ul>
+            <li>1。一般结构：ul>li</li>
+            <li>2。常用结构：ul>li>a</li>
+            <li>3。嵌套：ul>li>ul>li</li>
+            <li>4。ul和li的属性
+                <br>
+    type：设置项目符号的项目类型
+                <br>取值
+                <br>disc 默认值：黑色实心圆
+                <br>circle  空心圆
+                <br>square 黑色实心矩形
+                <br>none 不显示
+            </li>
+       </ul>
+    </li>
+
+    <li>2有序列表
+        <ul>
+            <li>1基础结构：ol>li</li>
+             <li>2常用结构:ol>li>a</li>
+            <li>3嵌套:ol>li>ol>li 或 ol>li>ul>li</li>
+            <li>4 ol和li的属性 <br>
+            type：设置项目符号，默认1 可取值a   A  i I
+                <br>start：设置从第几个开始 取值数字
+                <br>reversed：倒序 reversed=“reversed”当属性等于属性值时，可以简写为属性
+            </li>
+        </ul>
+
+    </li>
+
+    <li>3自定义列表（都是双标签）
+            <ul>
+             <li>dl自定义列表开始标签</li>
+                <li>dt自定义列表项 主体标签</li>
+                <li>dd自定义列表项 注释（描述）标签</li>
+
+            </ul>
+    </li>
+
+</ul>
+<hr>
+<h4>7，表格</h4>
+数几行几列时，table里有几个tr就有几行，每tr里有几个td/yh就有几列
+<ul>
+    <li>1作用：存储数据，向用户展示数据</li>
+    <li>2标签：
+    <ul>
+        <li>table表格>tr行>td单元格（列）<br>
+        td可以换成th显示效果为单元格内水平居中且加粗
+        </li>
+        <li>caption 表格的标题</li>
+    </ul>
+    </li>
+
+</ul>
+<hr color="red">
+<h2>03表格的标签（掌握）</h2>
+都是双标签 一个table有几个tr就有几行。一个tr有几个td/th就有几列（横行竖列）
+<ul>
+    <li>table 表格开始</li>
+    <li>tr 行</li>
+    <li>td 列，单元格</li>
+    <li>th 特殊单元格 内容默认水平居中且加粗</li>
+    <li>caption 表格的标题（居中显示）写在table和tr之间，可以嵌套文本格式化标签，如b，i，u</li>
+
+    <li type="circle">↓ 新的（对样式没影响，只是划分表格区域）</li>
+    <li>thead 表格的头部 （位置要包含在tr外边）</li>
+    <li>tbody 表格的身体（浏览器默认普通单元格为身体）</li>
+    <li>tfoot 表格的脚部</li>
+
+</ul>
+
+<hr color="red">
+<h2>04 table的属性（了解）</h2>
+<hr color="red">
+<dl>
+    <dd>border用来设置表格边框尺寸的大小</dd>
+    <dd>align 设置表格对于网页的水平对齐方式 写在table标签里 默认居左。内容需要给tr（行）或者td（列）设置</dd>
+    <dd>cell（单元格） padding（内边距） 内容距边框的距离（是整个内边距为20，不是某一方向）</dd>
+   <dd>cellspacing（space，空间，距离）设置单元格(边框)之间的距离</dd>
+    <dd>width 设置单元格格宽度</dd>
+    <dd>height 设置单元格高度</dd>
+    <dd>bgcolor 表格的背景颜色</dd>
+    <dd>background 表格的背景图片（图片太小会自动复制填充整个表格）</dd>
+    <dd>bordercolor 表格的边框颜色 默认没有边框</dd>
+</dl>
+<h4>05 tr（行）的属性（了解）</h4>
+<hr color="red">
+
+<dl>
+    <dt>ps：和table属性一样，多了valign垂直对齐方式</dt>
+    <dd>height 设置行的高度</dd>
+    <dd>width 设置行的宽度（不超过单元格整体）</dd>
+    <dd>align 设置行内容的水平对齐方式，默认left 可以取值center\right</dd>
+    <dd>valign 设置行内容的垂直对齐方式 默认（middle）居中，可以取值top（顶）\bottom（底）</dd>
+    <dd>bgcolor 设置行的背景颜色</dd>
+    <dd>background 设置行的背景图片</dd>
+</dl>
+
+<h4>06 td的属性（了解）</h4>
+<hr color="red">
+<dl>
+    <dt>th也可以用 表格特点：同列等宽 同行等高</dt>
+    <dd>width  设置单元格的宽度（一列跟着改变）</dd>
+    <dd>height 设置单元格的高度（一行跟着改变）</dd>
+    <dd>align  设置单元格内容的水平对齐方式</dd>
+    <dd>valign 设置单元格内容的垂直对齐方式 默认middle居中 可以取值top顶 bottom底</dd>
+    <dd>bgcolor 设置单元格的背景颜色</dd>
+    <dd>background 设置单元格的背景图片</dd>
+</dl>
+
+<h4>07合并单元格（掌握）</h4>
+<hr color="red">
+<dl>
+    <dt>td的属性</dt>
+    <dd>colspan 水平合并，取值为number</dd>
+    <dd> 属性写在从左往右开始的td里面
+        <br>
+     水平合并 删除同一行（一个tr标签里）的td
+        <br>
+         删除个数=合并个数-1
+    </dd>
+    <hr>
+    <dd>rowspan 垂直合并。取值为number（数字）</dd>
+    <dd>属性写在从上往下开始的td里面</dd>
+    <dd>垂直合并 删除下面几行（合并一行就删每下一层里的一个td）的td</dd>
+    <dd>删除的个数=合并的个数-1</dd>
+<dt>教学用的是整体表格自己合并完了再删除，可以逆运用，但确实逆推理太费时</dt>
+</dl>
+<h4>08表格练习</h4>
+<hr color="pink">
+<table border="1" align="center" width="500" height="500" cellspacing="2">
+    <tr>
+        <td colspan="2"></td>
+        <td rowspan="2"></td>
+    </tr>
+    <tr>
+        <td rowspan="2"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+    </tr>
+</table>
+
+<h4>09表格练习</h4>
+<hr color="red">
+<h5>(1)</h5>
+<table align="center" border="1" width="500">
+    <caption><b>同学通讯录</b></caption>
+    <tr bgcolor="#ffc0cb" >
+        <th>姓名</th>
+        <th>性别</th>
+        <th>电话</th>
+        <th colspan="2">兴趣爱好</th>
+
+    </tr>
+    <tr align="center">
+        <td>王明</td>
+        <td>男</td>
+        <td>88123456</td>
+        <td>旅游</td>
+        <td>篮球</td>
+    </tr>
+    <tr align="center">
+        <td>赵静</td>
+        <td>女</td>
+        <td>8765890</td>
+        <td>音乐</td>
+        <td>舞蹈</td>
+    </tr>
+    <tr height="26">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<h5>(2)</h5>
+table>tr*6>td*5 <br>
+先行再列
+<br>
+border决定表格外框厚度。cellspacing决定表格内单元格的边框大小
+<br>
+<table border="5" cellspacing="0" width="500" align="center">
+    <caption>学生信息表</caption>
+    <tr>
+        <th colspan="3">学生基本信息</th>
+        <th colspan="2">成绩</th>
+    </tr>
+    <tr>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>专业</th>
+        <th>课程</th>
+        <th>分数</th>
+    </tr>
+    <tr align="center">
+        <td>球球</td>
+        <td>男</td>
+        <td rowspan="2">计算机</td>
+        <td rowspan="3">程序设计</td>
+        <td>68</td>
+    </tr>
+    <tr align="center">
+        <td>喃喃</td>
+        <td>女</td>
+        <td>89</td>
+    </tr>
+    <tr align="center">
+        <td>小明</td>
+        <td>男</td>
+        <td>会计</td>
+        <td>68</td>
+    </tr>
+    <tr align="center">
+        <td>小明</td>
+        <td>男</td>
+        <td>建筑</td>
+        <td>建筑设计</td>
+        <td>68</td>
+    </tr>
+</table>
+<h3>10表格练习</h3>
+这个不用单元格背景图片，会把颜色占满。在单元格里套图片就行，可以套p或者br让图片文字分开
+<br>
+可以在单元格里插入列表
+<hr color="red">
+<table cellspacing="1" align="center" width="800" >
+    <tr align="center" bgcolor="indianred">
+        <td rowspan="2">酒店 <br> <img src="../weblianxi/sora/26.jpg" width="60"  alt=""></td>
+        <td>海外酒店</td>
+        <td>团购</td>
+    </tr>
+    <tr align="center" bgcolor="pink">
+        <td>特价酒店</td>
+        <td>民宿.客栈</td>
+    </tr>
+    <tr bgcolor="skyblue" align="center">
+        <td rowspan="2">机票 <br><img src="../weblianxi/sora/27.png" alt="" width="60"></td>
+        <td>火车票,抢票</td>
+        <td>汽车票，船票</td>
+    </tr>
+    <tr bgcolor="aqua" align="center">
+        <td>特价机票</td>
+        <td>专车，租车</td>
+    </tr>
+    <tr align="center" bgcolor="green">
+        <td rowspan="2">旅游 <br><img src="../weblianxi/sora/28.jfif" width="60" height="60" alt=""></td>
+        <td>目的地攻略</td>
+        <td>游轮旅游</td>
+    </tr>
+    <tr align="center" bgcolor="chartreuse">
+        <td>周边游</td>
+        <td>定制旅行</td>
+    </tr>
+    <tr align="center" bgcolor="orange" height="43">
+        <td>景点玩乐</td>
+        <td>美食林</td>
+        <td>购物，外汇</td>
+    </tr>
+    <tr bgcolor="orange" align="center" height="43">
+        <td>礼品卡</td>
+        <td>WiFi电话卡</td>
+        <td>保险，签证</td>
+    </tr>
+</table>
+<h3>11form表单（掌握）</h3>
+<hr color="red">
+<dl>
+    <dt>1作用</dt>
+    <dd>提交数据，使页面具有交互性（一阶段只写样式即可，三阶段才有服务器）</dd>
+    <dt>2标签</dt>
+    <dd>form 双标记，块级元素。里边写表单或想向服务器提交的元素（之前学标签的都可以套）用来提交数据（交互必备）</dd>
+    <dt>注意 </dt>
+    <dd>一个页面可以有多个form</dd>
+    <dd>form之间不可以相互嵌套</dd>
+    <dt>属性（掌握）</dt>
+    <dd>name 表单的名称</dd>
+    <dd>action 提交的地址 </dd>
+    <dd>method 提交的方式方法 默认get 可取值post
+        <dl>
+            <dt>get和post的区别</dt>
+            <dd>（1）get提交的数据不安全，数据会在地址栏中显示；post不会显示</dd>
+            <dd>（2） get提交的数据大小有限制：post理论上没有限制</dd>
+            <dt>
+                <b><u><i>12 表单元素（表单域和表单按钮的共名）1（掌握）
+                </i></u></b>
+                <hr color="blue" width="400" align="left"></dt>
+            <dd><small>一个完整的表单包含三个基本组成部分：表单标签（form），表单域（如账户 密码框），表单按钮（如点击登录）。<br>
+            <u>表单域和表单按钮都属于表单元素</u></small></dd>
+            <dd>(3)表单元素（除了form是块级，其他都是行级元素）</dd>
+            <dd>input  （单标记）
+                <br>
+                属性
+            <ul>
+                <li>type 区分 input的类型</li>
+                <li>name （写在input就是这个input的名字，写在form就是整个form的名字）（引入驼峰命名法：前一个单词首字母小写 后一个单词首字母大写）</li>
+                <li>value  当前值（一般给系统看）</li>
+                <li>id    用来做联动例如和label标签联动做文字也能当选项，提升用户体验</li>
+                <hr color="blue">
+            </ul>
+
+            </dd>
+            <dd>input的type属性：
+            <ul>
+                <li>text 单行文本框</li>
+                <li>password 密码框</li>
+                <li>radio 单选按钮 注：必须加name属性（语法：input type=“radio” name=*  《—两个），而且名字保持一样才能达成单选效果，复选也一样，个人理解是归为同一个选择题目下。题号就相当于name</li>
+                <li>checkbox 复选框（复选按钮）</li>
+                <hr align="center" width="10%">
+                <li type="none">按钮（行级元素）</li>
+
+                <li>submit 提交按钮 value属性值可以改变显示文字</li>
+                <li>reset 重置按钮 value属性值可以改变显示文字</li>
+                <li>button 空按钮 value可以更改显示文字</li>
+
+            </ul>
+                <li type="none">下列三个不再用input做标签</li>
+                <li>button 双标记 功能：提交（由此得默认type属性值=“submit”）
+                    <br>
+                格式：《button》内容《button》
+                </li>
+                <li>button type =“reset”  功能：重置</li>
+                <li>button type=“button”  功能：空按钮</li>
+
+
+            </dd>
+            <hr color="pink" width="10%" align="left">
+            <dt>下拉列表（也写在form里 求可以交互）</dt>
+            <dd>用select 嵌套option 在option之间写显示内容 value表S示当前值 都是双标签 行级元素</dd>
+            <dd>语法：<br>
+                《select》
+                    《option》内容《/option》
+                    《option》内容《/option》
+                    《option》内容《/option》
+                《/select》
+            </dd>
+            <dt>多行文本框</dt>
+            <dd>textarea（文本 域） 双标签 在里面写内容 行级元素 有属性
+                <br>
+                name
+                <br>
+                id
+                <br>
+                cols 列 改变水平长度
+                <br>
+                rows 行 改变垂直长度
+            </dd>
+            <dt>label属性（提升用户体验度 label：标签）</dt>
+            <dd>《label for=“”》《/label》 for属性值和表单元素的id属性值一致</dd>
+            <dt>表单元素（了解）</dt>
+            <dd>文件：《input type=“file”/》 注：默认的表单不支持提交文件，需要修改表单的编码格式 需要在标签内加上“enctype="multipart/form-data"”</dd>
+            <dd>隐藏域：《input type=“hidden”/》 在页面中不显示 但携带的数据可以正常提交</dd>
+            <dd>图片提交按钮：《input type=“image” src=“”/》</dd>
+            <dt>表单元素的属性 </dt>
+            <dd>type 表单元素的类型</dd>
+            <dd>name 表单元素的名称 不能给汉字 </dd>
+            <dd>value 表单元素的当前值 可以给汉字 </dd>
+            <dd>checked 默认被选中，只配合单选框和多选框按钮使用 （属性等于属性值）</dd>
+            <dd>selected 默认第一个显示。配合select的option使用，属性等于属性值</dd>
+            <dd>disabled 禁用 属性等于属性值·只可以看，不可以编辑 颜色变灰</dd>
+            <dd>readonly 只读  属性等于属性值只可以看，不可以编辑 颜色不变，但无输入效果</dd>
+            <Dd>size 显示的数量，配合select使用
+                <br>
+                select[name=city id=city size=2]>option[value= ]*3
+                <select name="city" id="city" size="2">
+                    <option value="bj">北京</option>
+                    <option value="sh">上海</option>
+                    <option value="sjz">石家庄</option>
+                </select>
+            </Dd>
+
+
+        </dl>
+    </dd>
+</dl>
+
+
+
+
+
+
+
+
+</body>
+</html>
