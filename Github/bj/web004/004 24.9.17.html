@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-复习和H5新增样式</title>
+</head>
+<body>
+<!--
+这些是24.9.17做的，没注释的是10月底才手痒痒回来重新做的
+<h3>一，复习</h3>
+<hr>
+1 表格
+<br>
+①作用
+
+<br><br><br>
+②标签
+
+
+
+<br>
+<br>
+<br>
+2 表单  F12查看源代码
+<br>
+
+<table>
+    <caption>标题</caption>
+    <thead>
+    <tr>
+        <th>11111</th>
+        <th>11111</th>
+        <th>11111</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>11111</td>
+        <td>11111</td>
+        <td>11111</td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+    <tr>
+        <td>11111</td>
+        <td>11111</td>
+        <td>11111</td>
+    </tr>
+    </tfoot>
+</table>
+
+<br>
+
+3 table（表格）的属性
+<br>
+<p>border：边框</p>
+<p>bgcolor：背景颜色</p>
+<p>background：背景图片</p>
+<p>width：表格宽度</p>
+<p>height：高度</p>
+<p>bordercorlor：边框颜色</p>
+<p>cellspacing:单元格之间的距离</p>
+<p>cellpadding:内容距边框的距离</p>
+<p>align：设置表格的对齐方式</p>
+
+4 tr（行）的属性
+-->
+
+<h3>一   复习（F12看代码）</h3>
+<hr size="4"  color="black">
+<br>
+<h4>1.表格</h4>
+1）作用
+<br>
+存储数据，向用户展示数据
+<br>
+2）标签
+table>tr*3>td*3 如下是三行三列的表格
+<br>
+<table border="1">
+    <CAPTION>标题 caption</CAPTION>
+        <thead>  <!-- 表格头部 -->
+            <tr>
+                <th>th <!-- 默认水平居中且加粗 ——--></th>
+                <th>thead</th>
+                <th>1</th>
+            </tr>
+        </thead>
+        <tbody> <!-- 表格身体 -->
+            <tr>
+                <td>tbody</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+        <tfoot><!-- 表格脚部 -->
+            <tr>
+                <td>tfoot</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </tfoot>
+
+</table>
+3）table属性（表格）
+<ul type="none">
+    <li>border 边框</li>
+    <li>width 表格宽度</li>
+    <li>height 表格高度</li>
+    <li>align 表格对齐方式</li>
+    <li>bgcolor 背景颜色</li>
+    <li>background 背景图片</li>
+    <li>bordercolor 边框颜色</li>
+    <li>cellspacing 单元格之间的距离</li>
+    <li>cellpadding 内容距边框的距离</li>
+</ul>
+    <br>
+4）tr属性（行）
+<ul type="none">
+    <li>height 高度</li>
+    <li>align 行内容的水平对齐方式 </li>
+    <li>valign 行内容的垂直对齐方式 （默认middle 居中|top 上|bottom 下）</li>
+    <li>bgcolor 背景颜色</li>
+    <li>background 背景图片</li>
+</ul>
+    <br>
+5）td属性（列/单元格）
+<ul type="none">
+    <li><b><u><i>特点：同行等高 同列等宽</i></u></b>
+        <div>即给一行的td单元格设置了高度，那这一行td的高都变
+            <br>
+            给一列的td单元格设置了宽度，则一列td的宽都变</div>
+    </li>
+    <li>width 宽度</li>
+    <li>height 高度</li>
+    <li>align 单元格内容水平对齐方式</li>
+    <li>valign 单元格内容垂直对齐方式（默认middle 居中|top 上|bottom 下）</li>
+    <li>bgcolog 背景颜色</li>
+    <li>background 背景图片</li>
+    <hr align="left" width="100" size="2" color="black">
+    <li type="circle">掌握</li>
+    <li>colspan 水平合并单元格</li><!-- 删水平方向的td*合并数量 即同一个th-->
+    <li>rowspan 垂直合并单元格</li><!-- 删垂直方向的td*合并数量 即包含其他th的td-->
+</ul>
+<br>
+<h4>2.表单</h4>
+
+1）作用
+<br>
+    提交数据，使页面具有交互性
+<br>
+2）标签
+<ul type="none">
+    <li>form （一个页面可以有多个form表单 但form之间 不能互相嵌套）</li>
+    <li><u>下面的皆写在form标签里面（掌握）</u></li>
+        <ul type="none">
+            <li>name 表单的名称</li>
+            <li>action 提交的地址</li>
+            <li>action 提交的方式方法 默认get 可取post</li>
+            <ul type="none"><li><h6>get和post的区别：
+                <br><ol>
+                    <li>get提交数据不安全 会在地址栏中显示 post则不会显示</li>
+                    <li>get只能提交少量数据，post理论上没有限制</li>
+                </ol>
+
+            </h6></li></ul>
+        </ul>
+</ul>
+3）表单元素
+<ul type="none">
+    <li><h4>前提：下列全写在form表单中</h4></li>
+    <li>input type="text" 文本框</li>
+    <li>input type="password" 密码框</li>
+    <li>input type="radio" name=""  单选按钮（必须加上name属性才能多选一，鄙人自认为是把选项放到一道题的样子）</li>
+    <li>input type="checkbox" 多选按钮</li>
+    <li>input type="submit"  提交按钮</li>
+    <li>input type="reset" 重置按钮</li>
+    <li>input type="button" 空按钮</li>
+    <li>《button》提交按钮《/button》<button>提交</button></li>
+    <li>《button type="reset"》重置《/button》<button type="reset">重置</button></li>
+    <li>《button type=“button”》空按钮《/button》<button type="button">空按钮</button></li>
+    <li>input type="file" 提交文件按钮 但默认表单不支持提交文件，需要修改form的编码格式 <sub>需要在标签内加上“enctype="multipart/form-data"</sub></li>
+    <li>input type="hidden" 隐藏域 在页面中不显示 但携带顶点数据可以正常提交  （不想给用户看，又像把数据传过去的情况用）</li>
+    <li>input type="image" src=“” 图片提交按钮（sec为图片路径，必须有 ）</li>
+    <hr size="1" color="black" align="left" width="100">
+    下拉列表
+    <li>《select》
+        <br>
+                《option value=“”》value（当前值）属性值为显示内容《/option》
+        <br>
+                《option value=“”》《/option》
+        <br>
+                《option value=“”》《/option》
+        <br>
+        《/select》</li>
+    多行文本框
+    <li>《textarea name=“” id=“” cols=“” ros=“”》cols列 改变水平长度 rows行 改变垂直长度《/textarea》</li>
+    label属性 -提升用户体验度
+    <li>《label for=“”》for属性和id属性绑定 属性一致《/label》应用场景为：点击描述按钮的字也能选上按钮<del>关于表单我已经两个月没碰了，故不在此展示</del>
+        <br>如-请选择您的性别：
+        <input type="radio" name="xingbie" id="n"><label for="n">男</label>
+        <input type="radio" name="xingbie" id="v"><label for="v">女</label>
+        <input type="radio" name="xingbie" id="zsj"><label for="zsj">武装直升机</label>
+    </li>
+    <li><h6><sub>关于起名：value没有限制。id/name包含数字英文 且不能数字为开头</sub></h6></li>
+</ul>
+4）表单元素的属性
+<ul type="none">
+    <li>type 类型</li>
+    <li>name 名称</li>
+    <li>value 当前值</li>
+    <li>checked 默认被选中 配合单选按钮和多选按钮使用（唯一需另外掌握 上边仨基本都有）</li>
+    <li>selected 默认显示 配合option使用</li>
+    <li>disabled 禁用 只能看 不能编辑</li>
+    <li>readonly 只读 </li>
+    <li>size 显示的数量 配合select使用 取值为number（数字）
+        <br>
+        <select size="5">
+            <option value="cryq">春日野穹</option>
+            <option value="cryy">春日野悠</option>
+            <option value="lzm">濑津美</option>
+            <option value="al">艾拉</option>
+            <option value="xew">希尔薇</option>
+            <option value="fbdh">逢坂大河</option>
+            <option value="shxn">神户小鸟</option>
+        </select>
+    </li>
+
+</ul>
+<del><small>24.9.17-2024年10月19日22:14:41 其实是从昨天一直想着，然后今天买了个破解激活码，从晚上七点三十六看到现在重新一股劲看完的这一集半小时的东西，快三个小时啊唉，不过话说回来那种感觉又回来了似的，挺好</small></del>
+
+<hr size="4" color="black">
+<h3>二 作业 (02~06集)</h3>
+作业1
+    <form action="" method="post" enctype="multipart/form-data" name="form1">
+        <table align="center" border="1" cellspacing="0">
+            <th colspan="4">教员搜索</th>
+            <tr>
+                <td>搜索类型</td>
+                <td width="162">
+                    <select name="" id="">
+                        <option value="xx">搜索教员信息</option>
+                    </select>
+                </td>
+                <td>教员身份</td>
+                <td>
+                    <select name="" id="">
+                        <option value="sf">不限</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    所在地区
+                </td>
+                <td>
+                    <select name="" id="">
+                        <option value="">不限</option>
+                    </select>
+                </td>
+                <td>性别</td>
+                <td>
+                    <select name="" id="">
+                        <option value="">不限</option>
+                        <option value="">男</option>
+                        <option value="">女</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>学习科目</td>
+                <td colspan="3">
+                    <select name="" id="">
+                        <option value="">请在以下列表中选择</option>
+                        <option value="">1</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>学习</td>
+                <td colspan="3"><input type="text"></td>
+            </tr>
+            <tr>
+                <td>专业</td>
+                <td><input type="search"></td>
+                <td colspan="2"><input type="submit" value="搜索 submit">
+                <button value="搜索">搜索 <small>button</small></button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+<p align="right"><small>完成于2024年10月26日14:27:11
+</small></p>
+作业2
+    <form action="" form="form2" enctype="multipart/form-data">
+        <table align="center" border="1" cellspacing="0" cellpadding="5">
+            <caption><h1>尚学堂学生信息表</h1></caption>
+                <tr>
+                    <td>学生姓名：<input type="text">设置密码：<input type="password"></td>
+                </tr>
+                <tr>
+                    <td>性别：
+                        <br>
+                        <label for="man">
+                            男生
+                        </label>
+                        <input type="radio" name="xb" id="man">
+                        <label for="women">
+                            女生
+                        </label>
+                        <input type="radio" name="xb" id="women">
+                        <hr>
+                        籍贯：
+                        <select name="" id="" >
+                            <option value="">北京</option>
+                            <option value="">上海</option>
+                            <option value="">天津</option>
+                        </select>
+                        <hr>
+                        自我介绍：
+                        <textarea name="" id="" cols="58" rows="10" title="row是行数，越多越高（垂直方向） cols是列，越多越宽（水平方向）">
+
+                    </textarea></td>
+                </tr>
+                <tr>
+                   <td> 兴趣爱好：<br>
+                       <label for="zq">足球</label>
+                       <input type="checkbox" name="ah" id="zq">
+                       <label for="lq">篮球</label>
+                       <input type="checkbox" name="ah" id="lq">
+                       <label for="dm">动漫</label>
+                       <input type="checkbox" name="ah" id="dm">
+                       <label for="yy">音乐</label>
+                       <input type="checkbox" name="ah" id="yy">
+                       <label for="dy">电影</label>
+                       <input type="checkbox" name="ah" id="dy">
+                       <hr>
+                       上传照片：<input type="file"></td>
+                </tr>
+        </table>
+    </form>
+<p align="right"><small>完成于2024年10月26日14:48:52</small></p>
+作业4
+<br><p align="right"><small>开始2024年10月26日16:52:44</small></p>
+<form action="form4" name="form4">
+    <table cellpadding="10" border="1" align="center" cellspacing="0" width="500">
+        <tr align="center">
+            <td>姓名：</td>
+            <td><input type="text"></td>
+        </tr>
+       <tr align="center">
+           <td>密码：</td>
+           <td><input type="password"></td>
+       </tr>
+        <tr align="center">
+            <td>确认密码：</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr align="center">
+            <td>性别：</td>
+            <td><input type="radio"name="xb4" id="man4"><label for="man4">男</label><input type="radio" name="xb4" id="women4"><label for="women4">女</label></td>
+        </tr>
+        <tr align="center">
+            <td>爱好：</td>
+            <td>        <input type="checkbox" name="ah4" id="cf4"><label for="cf4">吃饭</label>
+                <input type="checkbox" name="ah4" id="wan4"><label for="wan4">玩耍</label>
+                <input type="checkbox" name="ah4" id="xx4"><label for="xx4">休息</label></td>
+        </tr>
+        <tr align="center">
+            <td>城市：</td>
+            <td><select name="" id="">
+                <option value="">请选择</option>
+                <option value="">请选择2</option>
+            </select></td>
+        </tr>
+        <tr align="center" valign="middle">
+            <td>自我介绍：</td>
+            <td><textarea name="" id="" cols="20" rows="4.5" >属于你个人的介绍，请填写</textarea></td>
+        </tr>
+        <tr align="center">
+            <td colspan="2"><button>立即注册</button></td>
+        </tr>
+    </table>
+<p align="right"><small>完成于2024年10月26日17:15:59</small></p>
+</form>
+
+
+作业3
+<p align="right"><small>开始于2024年10月26日17:38:44</small></p>
+<form action="" name="form3">
+    <table align="center" border="1">
+        <tr>
+            <td align="right">用户名：</td>
+            <td><input type="text" placeholder="请输入用户名"></td>
+        </tr>
+
+        <tr>
+            <td align="right">
+                密码：
+            </td>
+            <td><input type="password" placeholder="请输入密码"></td>
+        </tr>
+        <tr>
+            <td align="right">确认密码：</td>
+            <td><input type="password" placeholder="请再次输入密码"></td>
+        </tr>
+        <tr>
+            <td align="right">验证码：</td>
+            <td><input type="text" placeholder="请再次输入验证码"><img src="../CLANNAD_FV.png" alt="牡丹" title="牡丹" width="60" height="60"></td>
+        </tr>
+        <tr>
+            <td align="right">性别：</td>
+            <td><input type="radio" name="xb3" id="man3" checked><label for="man3" >男</label><input type="radio" name="xb3" id="women3"><label for="women3">女</label></td>
+        </tr>
+        <tr>
+            <td align="right">年龄：</td>
+            <td><input type="text" placeholder="请输入年龄"></td>
+        </tr>
+        <tr>
+            <td align="right">爱好：</td>
+            <td><select name="" id="">
+                <option value="">购物</option>
+                <option value="">睡觉</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td align="right">你喜欢的游戏：</td>
+            <td>
+                <input type="checkbox" name="ah3" id="cf3">
+                <label for="cf3">穿越火线</label>
+                <input type="checkbox" name="ah3" id="LOL">
+                <label for="LOL">英雄联盟</label>
+                <input type="checkbox" name="ah3" id="nz3">
+                <label for="nz3">逆战</label>
+                <input type="checkbox" name="ah3" id="wz3">
+                <label for="wz3">王者荣耀</label>
+                <input type="checkbox" name="ah3" id="xxl3">
+                <label for="xxl3">开心消消乐</label>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">邮箱：</td>
+            <td><input type="email" placeholder="请输入邮箱"></td>
+        </tr>
+        <tr>
+            <td align="right">邮箱密码：</td>
+            <td><input type="password" placeholder="请输入邮箱密码"></td>
+        </tr>
+        <tr>
+            <td align="center"><input type="submit" value="提交submit"/> </input></td>
+            <td><input type="reset" value="重置reset"></td>
+        </tr>
+    </table>
+</form>
+<p align="right"><small>完成于2024年10月26日17:58:54</small></p>
+<p>
+    <u>placeholder本节学会已淡忘标签1，作用于替换value属性，并且输入并不占用文本位置 <br>
+        checked已淡忘标签2，作用于input属性的选项默认选中</u>
+</p>
+作业5
+<br>
+<p align="right"><small>开始时于2024年10月26日18:35:28</small></p>
+<form action="" enctype="multipart/form-data">
+    <table align="center" >
+        <tr><td align="right">姓名：</td> <td><input type="text"></td></tr>
+        <tr>
+            <td align="right">密码：</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td align="right">确认密码：</td>
+            <td><input type="password"></td>
+        </tr>
+        <tr>
+            <td align="right">密码提示问题：</td>
+            <td><select name="" id="">
+                <option value="">请选择一个问题</option>
+                <option value="">早饭吃什么</option>
+                <option value="">午饭吃什么</option>
+                <option value="">晚饭吃什么</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td align="right">密码提示答案：</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td align="right">性别：</td>
+            <td>
+                <input type="radio" name="sex5" id="man5" checked>
+                <label for="man5">男</label>
+                <input type="radio" name="sex5" id="women5">
+                <label for="women5">女</label>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                年龄：
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">籍贯：</td>
+            <td>
+                <select name="" id="">
+                    <option value="">请选择</option>
+                    <option value="">河北</option>
+                </select>省/直辖市
+                <select name="" id="">
+                    <option value="">请选择</option>
+                    <option value="">保定</option>
+                </select>市
+            </td>
+        </tr>
+        <tr>
+            <td align="right">爱好：</td>
+            <td>
+                <input type="checkbox" name="ah5" id="sw5" checked>
+                <label for="sw5">上网</label>
+                <input type="checkbox" name="ah5" id="ty5">
+                <label for="ty5">体育</label>
+                <input type="checkbox" name="ah5" id="xx5">
+                <label for="xx5">学习</label>
+            </td>
+        </tr>
+        <tr><td  align="right" valign="top">个人介绍：</td>
+            <td><textarea name="" id="" cols="30" rows="7"></textarea></td>
+        </tr>
+        <tr>
+            <td align="right">上传头像：</td>
+            <td><input type="text"><input type="file"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit">
+                <input type="reset">
+            </td>
+        </tr>
+    </table>
+</form>
+<p align="right"><small>完成于2024年10月26日18:56:19</small></p>
+<hr size="4" color="black">
+<h3>07 -H5新增type类型</h3>
+        <H5>同样的，都写在form表单里</H5>
+<form action="">
+    <button>提交（共10个，需了解）</button>
+    <ul type="none">
+        <li>邮箱：《input type="emall"》<input type="emall">js判断只包含@几后面一个字符（任意字符），后面就没了。可以加name属性于地址栏（get情况下）显示提交数据{原话：必须包含@，@后面必须有内容}</li>
+        <li>网址：《input type=“URL”》<input type="url">js判断只到http：//(任意内容，但必须有){原话：必须包含协议 协议后面必须有内容}</li>
+        <li>搜索框：《input type=“search”》<input type="search">可见最后有×，后期可以改样式</li>
+        <li>数字：《input type=“number”》<input type="number">（新增属性）可以设置min最小值 max最大值 step步长（但数字不能为其数任意倍数以外的数） （旧）value设置当前值
+        </li>
+        <li>范围（滑块）：《input type=“range”》<input type="range">
+            可加min max step value。
+        </li>
+        <li>颜色：《input type=“color”》<input type="color">可设value的16进制和RGB颜色  默认黑色，不支持颜色英文设置 </li>
+        <li>电话：《input type=“tel”》<input type="tel">电脑端显示为文本框手机未知</li>
+        <li>日期（天）：《input type=“date”》<input type="date"></li>
+        <li>周：《input type=“week”》<input type="week"></li>
+        <li>月：《input type=“month”》<input type="month"></li>
+    </ul>
+</form>
+<p align="right">结束于2024年10月26日22:41:29</p>
+</body>
+
+</html>
