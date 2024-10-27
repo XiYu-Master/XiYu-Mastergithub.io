@@ -386,8 +386,6 @@ table>tr*3>td*3 如下是三行三列的表格
     </table>
 <p align="right"><small>完成于2024年10月26日17:15:59</small></p>
 </form>
-
-
 作业3
 <p align="right"><small>开始于2024年10月26日17:38:44</small></p>
 <form action="" name="form3">
@@ -545,8 +543,11 @@ table>tr*3>td*3 如下是三行三列的表格
     </table>
 </form>
 <p align="right"><small>完成于2024年10月26日18:56:19</small></p>
+
+
+
 <hr size="4" color="black">
-<h3>07 -H5新增type类型</h3>
+<h3>H5新增type类型 07</h3>
         <H5>同样的，都写在form表单里</H5>
 <form action="">
     <button>提交（共10个，需了解）</button>
@@ -567,6 +568,249 @@ table>tr*3>td*3 如下是三行三列的表格
     </ul>
 </form>
 <p align="right">结束于2024年10月26日22:41:29</p>
+
+
+
+
+<h3>H5新增表单元素的属性 08（1）</h3>
+<p align="right"><small>开始于2024年10月27日11:56:37</small></p>
+<hr size="4"  color="black">
+<form action=""> 
+<p>用户名：<input type="text" name="userName" placeholder="用户名/邮箱/手机号">autofocus设置默认焦点       required设置不能为空  minlength设置最小长度 maxlength设置最大长度 数字/英文/汉字都为1字符  </p>
+<p>密码：<input type="password" name="password" placeholder="请输入密码"></p>
+<p>邮箱：<input type="emall" name="emall" placeholder="请输入邮箱地址" multiple>有multiple时可以通过输入","隔开两个邮箱地址 。可以提交</p>
+<p>数字：<input type="number" min="0" max="100" step="5" value="10"></p>
+<p><input type="submit"></p>
+</form>
+<ol>总结H05新增表单元素的属性 <u>只需掌握placeholder</u>（没写配合谁用的默认表示所有的表单元素都可以用）
+    <li>placeholder：默认提示</li>
+    <li>autofocus：自动获取焦点（推荐写在第一个表单元素上）</li>
+    <li>required：必填项</li>
+    <li>min和max：最小值和最大值 一般配合number和range范围使用</li>
+    <li>step：步长 配合number和range范围使用</li>
+    <li>minlength和maxlength：最小长度和最大长度，汉字，英文，数字，标点符号都算一个长度</li>
+    <li>multiple：可以输入多个，用英文的逗号隔开，一般配合emall/URL使用</li>
+</ol>
+<p align="right"><small>完成于2024年10月27日12:35:04</small></p>
+
+<h3>布局标签 双标签div  span（掌握）08（2）</h3>
+<hr size="4"  color="black">
+    <ol>两种标签显示如下
+      <li><div>div</div></li>
+      <div>div</div>
+      <li><span>span</span>
+      <span>span</span></li>
+        注：div为块级元素 span为行内元素 且都是 <u>无语义</u>的标签
+        翻译为【盒子/块】
+        <br><small>有语义化的如form一看就知道表单 table是表格 th是水平线 br是换行</small>
+
+      <li>
+          <table background="../../tp/bandicam%202024-10-27%2008-08-21-912.jpg" width="1200" >
+              <caption>F12可以看这部分有div布局代码和注释</caption>
+              <tr>
+                  <td height="728" width="1100"></td>
+              </tr>
+          </table>
+          <div><!-- 最外层容器 作用：区分整个网页-->
+                <div><!--水平居中 作用：适配不同分辨率屏幕且仅为了居中唯一作用-->
+                     <div><!-- 上面的容器 -->
+                        <div></div><!-- 左边的容器-->
+                        <div></div><!--右边的容器 -->
+                     </div>
+
+<!--                    即尽量把同类归为一个盒子里-->
+
+                     <div><!-- 下面的容器-->
+                         <div></div><!-- 一 -->
+                         <div></div><!-- 二 -->
+                         <div></div><!-- 三 -->
+                         <div></div><!-- 四 -->
+                     </div>
+                </div>
+          </div>
+      </li>
+    </ol>
+<p align="right">完成于2024年10月27日08:31:33</p>
+
+
+
+
+<h3>H5新增语义化布局标签（掌握） 09</h3>
+<br>
+<p align="right"><small>开始于2024年10月27日11:23:18</small></p>
+<hr size="4"  color="black" width="200" align="left">
+<ol>
+    F12看代码（div布局）
+<!--    最外层的容器-->
+    <div>
+<!--     把盒子合理分类   -->
+        <div>头部</div>
+        <div>导航</div>
+        <div>主体
+            <div>
+               左侧
+                <div>
+                    左侧内部
+                </div>
+            </div>
+            <div>右侧 </div>
+        </div>
+        <div>页脚</div>
+    </div>
+    <hr>
+    用H5新增语义化标签布局
+    <div><!--        最外层容器-->
+        <header>
+            头部header
+        </header>
+        <nav>导航nav</nav>
+        <div>主体
+             <article>
+                 文章article
+                        <section>
+                            章节section
+                        </section>
+             </article>
+             <aside>侧边栏aside</aside>
+        </div>
+        <footer>页脚footer</footer>
+    </div>
+    H5新增元素 IE低版本浏览器不支持（IE8及以下不支持）
+    <li>header头部</li>
+    <li>nav导航</li>
+    <li>footer页脚</li>
+    <li>aside侧边栏</li>
+    <li>article文章,博客,帖子等</li>
+    <li>section章节/独立的一块（相当于无语义的div）</li>
+</ol>
+<p align="right"><small>完成于2024年10月27日11:47:25</small></p>
+
+
+
+
+
+<hr size="4"  color="black">
+<h3>视频（掌握） 10</h3>
+<p align="right"><small>开始于2024年10月27日16:04:34</small></p>
+video 视频 双标签 行内元素 标签内写视频加载失败时显示的东西
+<p>支持的视频格式有：.mp4 \.ogg(移动端)\.webM(高清)</p>
+<p>常用属性有
+</p>
+<ol>
+    <li>src 路径 必须属性</li>
+    <li>loop 循环播放 默认放一遍自动暂停</li>
+    <li>muted 静音</li>
+    <li>autoplay 自动播放 若浏览器不能自动播放 需加一个静音标签（注：谷歌浏览器禁止自动播放）</li>
+    <li>controls 控制面板（小型视频播放器） </li>
+    <li>poster 视频播放前 显示一张图片 视频暂停不显示图片。且与autoplay【自动播放】冲突（个人理解为视频封面）</li>
+    <li>width 宽</li>
+    <li>height 高</li>
+</ol>
+<video src="../bandicam%202024-10-27%2016-37-02-243.mp4" loop controls muted autoplay width="200" height="200">您的浏览器不支持视频</video>
+<p align="right"><small>完成于2024年10月27日16:38:01</small></p>
+
+
+
+
+
+<hr size="4"  color="black">
+<h3>音频（了解） 11</h3>
+<p align="right"><small>开始于2024年10月27日16:44:55</small></p>
+audio 音频标签 行内元素 双标签
+<audio src="../../Music/いきものがかり%20-%20SAKURA(1).mp3" controls autoplay muted loop></audio>
+<img src="../../tp/いきものがかり%20-%20超いきものばかり〜てんねん記念メンバーズBESTセレクション〜(1).jpg" alt="SAKURA" height="200" width="300">
+<ol>1标签
+    <ol>
+        <li>《audio》无法显示时给用户提示《/audio》</li></ol>
+    2支持格式 <ol>
+        <li>.mp3/.ogg/.wav</li></ol>
+3属性 <ol>
+        <li>src 必须属性 路径</li>
+        <li>loop 循环播放</li>
+        <li>controls 显示控制面板</li>
+        <li>muted 静音</li>
+        <li>autoplay 自动播放</li>
+    </ol>
+</ol>
+source 资源
+<ol>
+    <li>1.作用 <br>给浏览器提供多钟视频或者音频格式的选择</li>
+    <li>2.标签 <br>《source/》</li>
+    <li>3.语法  这样写不会显示三遍 哪个能放就停在那了<br>
+        《video（可以换成audio音频）》
+        《source src="视频.mp4"》
+        《source src="视频.ogg"》
+        《source src="视频.webM"》
+        （上面都不能显示则显示video/audio标签内的内容）
+        《/video》
+    </li>
+</ol>
+《video src=""》
+    《source src="视频.mp4"》
+    《source src="视频.ogg"》
+    《source src="视频.webM"》
+《/video》
+<p align="right"><small>完成于2024年10月27日17:46:23</small></p>
+
+
+
+
+
+<hr size="4"  color="black">
+<h3>H5新增元素（了解） 13</h3>
+<p align="right"><small>开始于2024年10月27日18:08:42</small></p>
+元素的组合 多用于图片和图片描述的组合
+<br>
+如dl自定义列表>dt内容>dd注释
+<br>
+ <p>
+    <dl>
+        <dt><img src="../CLANNAD_FV.png" alt=""></dt>
+        <dd>牡丹</dd>
+    </dl>
+    figure 块级元素↓
+    <figure>
+        <img src="../CLANNAD_FV.png " alt="">
+        <figcaption>牡丹</figcaption>
+    </figure>
+ </p>
+<br>details 详细信息 块级元素 可以加open设置三角默认打开；在双标签内容里写【summary】替换详细信息的文本【/summary】
+<details>
+    <summary>你好</summary>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, cupiditate doloremque esse explicabo facere laboriosam, laborum, nobis quaerat ratione veritatis voluptates voluptatibus? Deleniti eum illum necessitatibus pariatur provident repudiandae sunt!</p>
+</details>
+行内元素↓
+<br>
+<ol>
+    <li>突出显示：
+        <p>旧：<strong>strong</strong>/<em>em</em>/<b>b</b></p>
+        <p>新：<mark>mark</mark></p></li>
+    <li>meter刻度
+    <p><meter value="">您的浏览器不支持刻度</meter></p>
+        属性：<br>
+        min最小值 默认0
+        <br>
+        max最大值 默认1
+        <br>
+        value当前值
+        <br>
+        low最低预警值
+        <br>
+        high最高预警值
+    </li>
+    <LI>progress进度条 双标签 之间写显示失败时的文本 不同浏览器显示不同
+        <br><progress></progress>
+        <br>属性
+        <br>max 最大值
+        <br>value 当前值
+    </LI>
+    <li>canvas 画布 双标签-之间写提示（您的浏览器不支持画布） 作用替代flash动画（三阶段学）用js绘制
+    </li>
+</ol>
+<p align="right"><small>结束于2024年10月27日18:48:17</small>
+    <br>至此 html已经结束 后面是css
+</p>
+
 </body>
 
 </html>
