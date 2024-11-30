@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url("https://www.ihchina.cn/Uploads/Picture/2018/11/14/s5bebbfc0524a4.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment:fixed ;
+    background-position: center center;
+}
+img{
+    margin: 0 auto;
+}
+.nav>li{
+    float: right;
+    padding: 20px 30px;
+    list-style-type: none;
+}
+.nav img{
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+    height: 38px;
+    width: 156px;
+}
+.nav a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+.nav a:hover {
+    color: rgba(248,113,113,0.63);
+}
+#foot45{
+    margin-top:45px ;
+}
+.header{
+    width: 100%;
+    margin-bottom: 30px;
+}
+#h3{
+    text-align: center;
+    font-size: 40px;
+    height: 40px;
+    color: #ffffff;
+    font-family: 仿宋;
+}
+
+.body{
+    width: 100%;
+    height: 200px;
+}
+.food{
+    width: 24%;
+    text-align: center;
+    color: white;
+    margin: 10px 0px 10px 10px;
+    float: left;
+
+}
+.food p{
+    padding: 0;
+}
+.food-img{
+    width: 100%;
+    height: 300px;
+}
+
+
+
+
+
+.foot{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    padding: 5px 16px;
+
+}
+.foot p:first-child{
+color: rgba(6, 26, 46, 0.72);
+}
+.foot p{
+    color: rgba(6,26,46,0.5);
+}
